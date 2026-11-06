@@ -1,0 +1,72 @@
+/* #letter1 {
+    border: 5px solid green;
+}
+
+#letter3 {
+    border: 5px solid green;
+}
+
+#letter5 {
+    border: 5px solid green;
+} */
+
+.letter {
+    height: 50px;
+    width: 100px;
+    background-color: black;
+    color: yellow;
+    /* Center the text within the div*/
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px; /* This command creates an imaginary line that spans the div vertically */
+    /* Rounds the corners of the div */
+    border-radius: 0px; /* px for equal rounding on all corners */
+    /* margin: 10px all sides margin adjust*/
+    margin-bottom: 20px;
+    display: inline-block;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+.odd {
+    border: 5px solid green;
+}
+
+.even {
+    border: 5px solid orange;
+}
+
+.background {
+    background-color: pink;
+}
+
+/*
+#letter1 {
+    top: 10px;
+    left: 10px;
+}
+
+#letter2 {
+    top: 10px;
+    right: 10px;
+}
+
+#letter3 {
+    bottom: 10px;
+    left: 10px;
+}
+
+#letter4 {
+    bottom: 10px;
+    right: 10px;
+}
+
+*/
+
+/* Positions Letter "O" In the middle of the page */
+/*#letter5 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}*/
