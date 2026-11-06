@@ -10,9 +10,9 @@
     border: 5px solid green;
 } */
 
-.letter {
+.circle {
     height: 50px;
-    width: 100px;
+    width: 50px;
     background-color: black;
     color: yellow;
     /* Center the text within the div*/
