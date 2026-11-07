@@ -20,11 +20,18 @@
     vertical-align: middle;
     line-height: 50px; /* This command creates an imaginary line that spans the div vertically */
     /* Rounds the corners of the div */
-    border-radius: 50%; /* px for equal rounding on all corners */
-    /* margin: 10px all sides margin adjust*/
-    margin-bottom: 20px;
+    border-radius: 50%;
     display: inline-block;
     position: absolute;
-    top: 0px;
-    left: 0px;
+    border: 5px solid black;
+}
+
+.red {
+    background-color: red;
+    border-color: darkred;
+}
+
+.green {
+    background-color: green;
+    border-color: darkgreen;
 }
