@@ -11,7 +11,7 @@ function add_circle() {
         e.classList.add("green")
         e.type = 1
     }
-    e.vel = 2 + Math.random() * 8 // Extends the range between 1 and 10
+    e.vel = 2 + Math.random() * 3 // Extends the range between 1 and 3
     e.y = 0 // "top" is just a property for object "e" created on the go.
     e.style.top = e.y + "px"
     e.onclick = circle_clicked;
@@ -31,9 +31,10 @@ function circle_clicked(event) {
         event.target.classList.add("red") // if green circles are clicked.
         event.target.type = 0
         score += 1
+        event.target.remove()
     }
     document.querySelector("#score").textContent = score
-    document.querySelector("#root").childNodes.forEach(move_cirlce)
+    document.querySelector("#root").childNodes.forEach(move_circle)
 }
 
 function move_circle(circle) {
