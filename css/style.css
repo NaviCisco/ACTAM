@@ -1,37 +1,36 @@
-/* #letter1 {
-    border: 5px solid green;
+#bar {
+    background-color: lightgrey;
+    border-radius: 5px;
+    padding: 0px;
 }
 
-#letter3 {
-    border: 5px solid green;
-}
-
-#letter5 {
-    border: 5px solid green;
-} */
-
-.circle {
-    height: 50px;
-    width: 50px;
+.key {
+    width: 30px;
+    height: 45px;
+    border-radius: 5px;
     background-color: black;
-    color: yellow;
-    /* Center the text within the div*/
-    text-align: center;
-    vertical-align: middle;
-    line-height: 50px; /* This command creates an imaginary line that spans the div vertically */
-    /* Rounds the corners of the div */
-    border-radius: 50%;
-    display: inline-block;
-    position: absolute;
-    border: 5px solid black;
+    display: inline-flex;
+    padding: 0px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 .red {
-    background-color: red;
-    border-color: darkred;
+    background-color: #DD4444;
 }
 
-.green {
-    background-color: green;
-    border-color: darkgreen;
+.yellow {
+    background-color: #E8AE1CBD;
+}
+
+.led {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: black;
+    position: relative;
+    left : 50%;
+    transform: translateX(-50%); /* This and the previous line center the element exactly at the center of its parent */
+    top: 6px;
 }

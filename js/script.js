@@ -1,54 +1,16 @@
-score = 0
+/* Instead of manually creating divs by copy-pasting them, automate the process. */
 
-function add_circle() {
-    e = document.createElement("div")
-    e.classList.add("circle")
-    e.style.left = Math.random() * window.innerWidth
-    if(Math.random() < 0.5) { // Math.random() generates a pseudorandom number in the 0-1 range.
-        e.classList.add("red")
-        e.type = 0 // This line creates a new property "type" for the object "e" on the go. In this case "type" is an integer.
-    } else {
-        e.classList.add("green")
-        e.type = 1
-    }
-    e.vel = 2 + Math.random() * 3 // Extends the range between 1 and 3
-    e.y = 0 // "top" is just a property for object "e" created on the go.
-    e.style.top = e.y + "px"
-    e.onclick = circle_clicked;
-    document.querySelector("#root").appendChild(e)
+function createKey(color) {
+    k = document.createElement("div")
+    k.classList.add("key")
+    k.classList.add(color)
+    l = document.createElement("led")
+    l.classList.add("led")
+    k.appendChild(l)
+    document.querySelector("#bar").appendChild(k)
 }
 
-function circle_clicked(event) {
-    // alert("You Clicked A Circle!") User-Oriented Message.
-    console.log("You Clicked A Circle!") // Developed Oriented Message.
-    // console.log(event) Prints a Pointer Event on the Console. A Pointer Event contains a lot of useful information that can be used.
-    // event.target.classList.remove("red")
-    if(event.target.type == 0) {
-        alert("You Just Died My Bro.")
-        score = 0 // If The User Dies, The Score Goes Back To Zero.
-    } else {
-        event.target.classList.remove("green") // This logic turns the green circles into red ones and prints an alert message
-        event.target.classList.add("red") // if green circles are clicked.
-        event.target.type = 0
-        score += 1
-        event.target.remove()
-    }
-    document.querySelector("#score").textContent = score
-    document.querySelector("#root").childNodes.forEach(move_circle)
-}
-
-function move_circle(circle) {
-    circle.y = circle.y + circle.vel
-    circle.style.top = circle.y + "px"
-    if (circle.type == 1 && circle.y > window.innerHeight) {
-        console.log("Game Over Lil Fella.")
-        document.querySelector("#score").textContent = "Game Over."
-    }
-}
-
-function falling_circles() {
-    document.querySelector("#root").childNodes.forEach(move_circle)
-}
-
-setInterval(add_circle, 1000)
-setInterval(falling_circles, 30)
+createKey("red")
+createKey("yellow")
+createKey("red")
+createKey("yellow")
