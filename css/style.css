@@ -6,7 +6,7 @@
 
 .key {
     width: 30px;
-    height: 45px;
+    height: 55px;
     border-radius: 5px;
     background-color: black;
     display: inline-flex;
@@ -33,4 +33,18 @@
     left : 50%;
     transform: translateX(-50%); /* This and the previous line center the element exactly at the center of its parent */
     top: 6px;
+    border: 2px solid darkred;
+}
+
+.active-led {
+    background-color: red;
+}
+
+.button {
+    background-color: black;
+    color: white;
+    display: inline-flex;
+    padding: 3px;
+    border-radius: 3px;
+    cursor: pointer;
 }
